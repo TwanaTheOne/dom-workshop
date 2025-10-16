@@ -1,21 +1,28 @@
-
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DOM-manipulation och eventhantering</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Övning 2 – Knappar som styr sidan</title>
 </head>
 <body>
-  <h1>DOM & Event Workshop - Del 2</h1>
-    <p>Denna sida används för alla övningar i Del 2.</p>
-    <div class="control">
-        <button id="btn1">Ändra färg</button>
-        <button id="btn2">Lägg till text</button>
-        <button id="btn3">Rensa text</button>
-        <p>Lorem ipsum dolor sit amet.</p>
-    </div>
+  <h1>Övning 2 – Knappar som styr sidan</h1>
 
-  <script src="./del2/script2.js"></script>
+  <!-- Rubrik som ska kunna ändras av knapp 4 -->
+  <h2 id="rubrik">Start-rubrik</h2>
+
+  <!-- Knapparna ska finnas i HTML enligt instruktionen -->
+  <div id="controls">
+    <button id="btn-bg">Byt bakgrundsfärg</button>
+    <button id="btn-add">Lägg till stycke</button>
+    <button id="btn-remove">Ta bort senaste stycke</button>
+    <button id="btn-names">stefanRobertIda</button>
+  </div>
+
+  <!-- Container där nya <p> hamnar -->
+  <div id="text-container"></div>
+
+  <!-- Koppla in JS (defer så att DOM finns när scriptet körs) -->
+  <script src="./del2/script2.js" defer></script>
 </body>
 </html>
