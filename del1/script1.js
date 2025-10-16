@@ -1,24 +1,25 @@
-//navigater : Karam och Zaida , 
-//driver : Twana
+// Övning 1 – Skapa och ändra element
 
-
-const rubrik = document.createElement("h1");
+// Skapa elementen
+const rubrik = document.createElement("h2");
 rubrik.textContent = "Min rubrik för dagen";
 rubrik.style.color = "#1e3a8a";
 
-
 const paragraf = document.createElement("p");
-paragraf.textContent = "Beskriv vädret idag";
+paragraf.textContent = "Idag är vädret soligt och kallt.";
 paragraf.style.color = "#fef3c7";
 
-const div = document.createElement("Det här är en färgad ruta");
+const ruta = document.createElement("div");
+ruta.textContent = "Det här är en färgad ruta";
+ruta.style.backgroundColor = "#10b981";
+ruta.style.padding = "10px";
+ruta.style.marginTop = "10px";
 
-
-
-const container = document.querySelector("#container");
-const content = document.createElement("div");
-content.classList.add("content");
-content.textContent = "This is the glorious text-content!";
-container.appendChild(content);
-
+// Lägg till i dokumentet
 document.body.appendChild(rubrik);
+document.body.appendChild(paragraf);
+document.body.appendChild(ruta);
+
+// Ändra paragrafens text via JS
+const idag = new Date().toLocaleDateString("sv-SE");
+paragraf.textContent += ` — Dagens datum: ${idag}`;
