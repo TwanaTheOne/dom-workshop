@@ -1,3 +1,7 @@
+Driver: Twana
+Navigators: Karam & Zaida
+
+
 // Övning 1 – Skapa och ändra element
 
 // Skapa elementen
